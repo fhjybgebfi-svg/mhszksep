@@ -6,7 +6,7 @@ import { getFirestore, doc, setDoc, getDoc, updateDoc, deleteDoc, increment, col
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-const peer = new Peer();
+const peer = new;
 
 const fmt = (n) => n >= 1e6 ? (n/1e6).toFixed(1)+'jt' : n >= 1e3 ? (n/1e3).toFixed(1)+'rb' : n;
 const parseEmojis = (text) => {
